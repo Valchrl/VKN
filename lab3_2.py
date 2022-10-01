@@ -1,4 +1,5 @@
 import sys
+a1=int(sys.argv[1])
 k = float(input('k (коефіціент): '))
 a = float(input('a (см): ')) * k
 h = float(input('h (см): ')) * k

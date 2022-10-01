@@ -6,7 +6,6 @@ d=float(input('Координати точки В(вісь ОУ): '))
 e=float(input('Введіть координати точки С (вісь ОХ): '))
 f=float(input('Введіть координати точки С (вісь ОУ): '))
 
-#math.pow(a)+math.pow(b); math.pow(c)+math.pow(d); math.pow(e)+math.pow(f)
 
 if a+b>c+d and a+b>e+f:
     print('Точка А більша')
