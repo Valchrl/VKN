@@ -6,6 +6,6 @@ h=0.3
 spisok=[]
 while x <= y:
     y=math.pow((x) ,1/3) + math.fabs(math.sin(x))
-spisok.append(y)
+spisok.append(y) #ghjk
 x=x+h
 print(spisok)
