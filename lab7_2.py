@@ -9,7 +9,7 @@ for i in range(a):
     second = str(s2)
     third = str(s3)
     fourth = str(s4)
-print('+999', s1, s2, s3, s4, sep='-')
+    print('+999', s1, s2, s3, s4, sep='-')
 
 
 
