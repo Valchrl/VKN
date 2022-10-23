@@ -1,5 +1,4 @@
 import numpy as np 
-import math
 a = input('Введіть а: ')
 arr1 = np.array(list(map(int, a.split(' '))))
 
@@ -24,5 +23,5 @@ print('Сума чисел з непарною сумою індексів: ', s
 print('---------------------------')
 
 
-    
+
 
