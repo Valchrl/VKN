@@ -1,22 +1,30 @@
 from array import array
 import re
 cmd_nf_str = 'Команда не знайдена'
+#Шаблон для виведення кількості населення
 pop_temp = '\t{key}: {val} чол.'
 pop_str = 'Населення:'
 area_str = 'Площа:'
 notfound_str = '\tне знайдено'
 area_temp = '\t{key}: {val} кв.км'
+#Ініціаллізація населення
 population = {'Україна': '40 000 000', 'Польша':'30 000 000'}
+#Ініціалізація площі
 areas = {'Україна':'603 700', 'Венгрія':'20 000 000'}
-
 def add_to_dict(params:list):
-    p = re.split('\' | \'', ' '.join(params[1:]))
+    #розділення рядка на частини 
+    #зріз 1 слова (Україна, Венгрія)
+    p = re.split('\' | \'', ' '.join(params[1:])) 
+    
     if len(p) > 1:
          for i in range(len(p)):
-            p[i] = p[i].strip('\'')
+            #Повертає копію зазначеного рядка, з обох кінців якого усунуто зазначені символи
+            p[i] = p[i].strip('\'') 
     else:
+        #розділяє словник за індексом через пробіл
         p = p[0].split(' ')
     if params[0] == '-a':
+        #пошук за ключем
         areas[p[0]] = p[1] 
         print(area_str)
         show_dict(areas, area_temp)
@@ -24,10 +32,12 @@ def add_to_dict(params:list):
         population[p[0]] = p[1]
         print(pop_str)
         show_dict(population, pop_temp)
-
 def show_dict(dict:dict, str_temp:str, search:str = None):
+    #лічильник 0
     counter = 0
+    #пошук не має бути невизначеним
     if search != None:
+        #повертає пари ключ-значення словника (items)
         for kv in dict.items():
             if search in kv[0]:
                 print(str_temp.format(key=kv[0], val=kv[1]))

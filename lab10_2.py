@@ -6,7 +6,6 @@ zip_list = ''
 
 for (dirpath,dirnames,filenames) in os.walk('C:\\PYTHON_PROGS'):
     
-    
     print(dirpath)
     new_line = '\n'
     for n in filenames:
